@@ -1,0 +1,49 @@
+/* Dashboard.css */
+body {
+    margin-left: 250px;
+    padding-top: 30px;
+    font-family: 'Arial', sans-serif;
+    background-color: #161618;
+    color: #ffffff;
+}
+
+.exchange-content {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 50px); /* Full width minus sidebar width */
+    margin-left: 0;
+    padding: 20px;
+    box-sizing: border-box; /* Ensure padding does not affect width */
+}
+
+.card {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    text-align: center;
+}
+
+.card h2, .card h3 {
+    margin-top: 0;
+}
+
+.card p {
+    margin: 5px 0;
+}
+
+.card a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+.exchanges-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

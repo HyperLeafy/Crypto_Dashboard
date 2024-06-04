@@ -1,9 +1,13 @@
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Sidebar from './components/Sidebar';
 import './styles/App.css';
+
+import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import Dashboard from './pages/Dashboard';
 import Price from './pages/Prices';
+import Exchanges from './pages/Exchanges';
+import News from './pages/News';
 
 function App() {
   return (    
@@ -15,8 +19,8 @@ function App() {
         <Routes>
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/prices" element={<Price />} />
-          <Route path="/exchanges" element={<h1>Exchanges</h1>} />
-          <Route path="/news" element={<h1>News</h1>} />
+          <Route path="/exchanges" element={<Exchanges />} />
+          <Route path="/news" element={<News />} />
           <Route path="/profile" element={<h1>Profile</h1>} />
           <Route path="/preferences" element={<h1>Preferences</h1>} />
           <Route path="/help" element={<h1>Help</h1>} />
@@ -26,6 +30,6 @@ function App() {
   </Router>    
 
   );
-}
+};
 
 export default App;
