@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Sidebar from './components/Sidebar';
+import './styles/App.css';
+import Header from './components/Header';
+import Dashboard from './pages/Dashboard';
+import Price from './pages/Prices';
 
 function App() {
-  return (
+  return (    
+  <Router>
+    <Header pageName={"Crypto Dashboard"}></Header>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Sidebar />
+      <div className="main-content">
+        <Routes>
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/prices" element={<Price />} />
+          <Route path="/exchanges" element={<h1>Exchanges</h1>} />
+          <Route path="/news" element={<h1>News</h1>} />
+          <Route path="/profile" element={<h1>Profile</h1>} />
+          <Route path="/preferences" element={<h1>Preferences</h1>} />
+          <Route path="/help" element={<h1>Help</h1>} />
+        </Routes>
+      </div>
     </div>
+  </Router>    
+
   );
 }
 

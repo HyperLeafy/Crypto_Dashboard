@@ -1,0 +1,14 @@
+.App {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  font-family: mako;
+}
+
+.main-content {
+  /* margin-left: 250px; Width of the sidebar */
+  padding-top: 60px; /* Height of the header */
+  width: calc(100% - 50px);
+  flex-grow: 1; /* This makes sure the content area takes the remaining space */
+  background-color: #161618; /* Optional: for better visual distinction */
+}

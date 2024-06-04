@@ -1,0 +1,5 @@
+primary color : #97A8B5
+alterantive primary color : #161618
+alterantive Secoundary : #1C1C1F
+alterative accent color :#06D5C1
+Secoundary color : 
